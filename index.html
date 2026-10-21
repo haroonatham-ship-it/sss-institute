@@ -1,0 +1,482 @@
+<!-- http://localhost:5000 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SSS Institution – Accounting & Finance Courses</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <div class="logo">
+      <span class="logo-icon">📊</span>
+      <div>
+        <strong>SSS Institution</strong>
+        <small>Accounting & Finance Excellence</small>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#home" onclick="showPage('home')">Home</a>
+      <a href="#catalog" onclick="showPage('catalog')">Courses</a>
+      <a href="#contact" onclick="showPage('contact')">Contact</a>
+      <a href="#admin" onclick="showPage('admin')" class="btn-admin">Admin Panel</a>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<!-- ========== PAGE: HOME ========== -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">⭐ Tamil Nadu's Premier Accounting Institute</div>
+      <h1>Master <span class="accent">Accounting</span> &amp; Finance</h1>
+      <p>Industry-ready courses in Tally Prime, Busy Accounting, Advanced Excel, Financial Modelling &amp; QuickBooks. Launch your career today.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('catalog')">Explore Courses</button>
+        <button class="btn-outline" onclick="showPage('contact')">Contact Us</button>
+      </div>
+      <div class="hero-stats">
+        <div><strong>1500+</strong><span>Students Trained</span></div>
+        <div><strong>5</strong><span>Expert Courses</span></div>
+        <div><strong>100%</strong><span>Placement Rate</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card c1">📈 Tally Prime</div>
+      <div class="floating-card c2">💼 QuickBooks</div>
+      <div class="floating-card c3">📊 Excel</div>
+      <div class="floating-card c4">🏦 Finance</div>
+      <div class="big-circle"></div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us">
+    <h2 class="section-title">Why Choose <span class="accent">SSS Institution?</span></h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🎓</div>
+        <h3>Expert Faculty</h3>
+        <p>Learn from industry professionals with 10+ years of experience in accounting and finance.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💻</div>
+        <h3>Hands-on Training</h3>
+        <p>Practical sessions on real accounting software used by top companies across India.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📜</div>
+        <h3>Certification</h3>
+        <p>Receive industry-recognized certificates upon course completion to boost your resume.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚀</div>
+        <h3>Job Assistance</h3>
+        <p>Dedicated placement support with ties to 50+ companies in Chennai and Tamil Nadu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED COURSES STRIP -->
+  <section class="courses-strip">
+    <h2 class="section-title">Our <span class="accent">Courses</span></h2>
+    <div class="strip-grid" id="homeCoursesGrid"></div>
+    <div class="center-btn">
+      <button class="btn-primary" onclick="showPage('catalog')">View All Courses →</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- ========== PAGE: CATALOG ========== -->
+<div id="page-catalog" class="page">
+  <div class="page-header">
+    <h1>Course <span class="accent">Catalog</span></h1>
+    <p>Choose from our industry-leading accounting and finance programs</p>
+  </div>
+  <div class="catalog-grid" id="catalogGrid"></div>
+</div>
+
+<!-- ========== PAGE: COURSE DETAIL ========== -->
+<div id="page-course" class="page">
+  <div class="course-detail-wrap" id="courseDetailWrap"></div>
+</div>
+
+<!-- ========== PAGE: CONTACT ========== -->
+<div id="page-contact" class="page">
+  <div class="page-header">
+    <h1>Contact <span class="accent">Us</span></h1>
+    <p>We're here to help you start your accounting career</p>
+  </div>
+  <div class="contact-layout">
+    <div class="contact-info-box">
+      <h2>SSS Institution</h2>
+      <p class="contact-tagline">Your Gateway to Accounting Excellence</p>
+      <div class="contact-item">
+        <span class="ci-icon">📞</span>
+        <div>
+          <strong>Phone / WhatsApp</strong>
+          <a href="tel:+91 ***** *****">+91 98765 43210</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="ci-icon">📧</span>
+        <div>
+          <strong>Email</strong>
+          <a href="mailto:info@sssinstitution.in">info@sssinstitution.in</a>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="ci-icon">📍</span>
+        <div>
+          <strong>Address</strong>
+          <span>123, Anna Salai, Chennai – 600002, Tamil Nadu</span>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="ci-icon">🕘</span>
+        <div>
+          <strong>Working Hours</strong>
+          <span>Mon – Sat: 9:00 AM – 7:00 PM</span>
+        </div>
+      </div>
+      <a href="https://wa.me/91**********" class="whatsapp-btn" target="_blank">
+        💬 Chat on WhatsApp
+      </a>
+    </div>
+    <div class="contact-form-box">
+      <h2>Enquiry Form</h2>
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" id="enqName" placeholder="Your full name">
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" id="enqPhone" placeholder="+91 XXXXX XXXXX">
+      </div>
+      <div class="form-group">
+        <label>Interested Course</label>
+        <select id="enqCourse">
+          <option value="">Select a course</option>
+          <option>Tally Prime</option>
+          <option>Busy Accounting</option>
+          <option>Advanced Excel</option>
+          <option>Financial Modelling</option>
+          <option>QuickBooks</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea id="enqMsg" placeholder="Any questions or special requirements..."></textarea>
+      </div>
+      <button class="btn-primary full-width" onclick="submitEnquiry()">Send Enquiry</button>
+    </div>
+  </div>
+</div>
+
+<!-- ========== PAGE: ADMIN ========== -->
+<div id="page-admin" class="page">
+  <div class="admin-wrap">
+    <div class="admin-sidebar">
+      <div class="admin-logo">⚙️ Admin Panel</div>
+      <nav class="admin-nav">
+        <button class="admin-tab active" onclick="adminTab('students')">👥 Students</button>
+        <button class="admin-tab" onclick="adminTab('payments')">💳 Payments</button>
+        <button class="admin-tab" onclick="adminTab('report')">📊 Monthly Report</button>
+        <button class="admin-tab" onclick="adminTab('catalog-mgmt')">📚 Manage Catalog</button>
+      </nav>
+    </div>
+    <div class="admin-main">
+
+      <!-- STUDENTS TAB -->
+      <div id="tab-students" class="admin-section">
+        <div class="admin-header">
+          <h2>Student Management</h2>
+          <button class="btn-primary" onclick="openStudentModal()">+ Add Student</button>
+        </div>
+        <div class="search-bar">
+          <input type="text" id="studentSearch" placeholder="🔍 Search by name, course or phone..." oninput="renderStudents()">
+        </div>
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>#</th><th>Name</th><th>Phone</th><th>Course</th><th>Fees</th><th>Paid</th><th>Balance</th><th>Joined</th><th>Actions</th></tr>
+            </thead>
+            <tbody id="studentsTable"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- PAYMENTS TAB -->
+      <div id="tab-payments" class="admin-section hidden">
+        <div class="admin-header">
+          <h2>Payment Records</h2>
+          <button class="btn-primary" onclick="openPaymentModal()">+ Record Payment</button>
+        </div>
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>#</th><th>Student</th><th>Course</th><th>Amount</th><th>Date</th><th>Method</th><th>Status</th></tr>
+            </thead>
+            <tbody id="paymentsTable"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MONTHLY REPORT TAB -->
+      <div id="tab-report" class="admin-section hidden">
+        <div class="admin-header">
+          <h2>Monthly Student Report</h2>
+          <div class="filter-row">
+            <select id="reportMonth" onchange="renderReport()">
+              <option value="">All Months</option>
+              <option>January</option><option>February</option><option>March</option>
+              <option>April</option><option>May</option><option>June</option>
+              <option>July</option><option>August</option><option>September</option>
+              <option>October</option><option>November</option><option>December</option>
+            </select>
+            <select id="reportCourse" onchange="renderReport()">
+              <option value="">All Courses</option>
+              <option>Tally Prime</option>
+              <option>Busy Accounting</option>
+              <option>Advanced Excel</option>
+              <option>Financial Modelling</option>
+              <option>QuickBooks</option>
+            </select>
+          </div>
+        </div>
+        <div class="report-stats" id="reportStats"></div>
+        <div class="table-wrap">
+          <table class="admin-table">
+            <thead>
+              <tr><th>#</th><th>Name</th><th>Course</th><th>Fees</th><th>Paid</th><th>Balance</th><th>Status</th></tr>
+            </thead>
+            <tbody id="reportTable"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CATALOG MGMT TAB -->
+      <div id="tab-catalog-mgmt" class="admin-section hidden">
+        <div class="admin-header">
+          <h2>Manage Course Catalog</h2>
+          <button class="btn-primary" onclick="openCatalogModal()">+ Add Course</button>
+        </div>
+        <div class="catalog-mgmt-grid" id="catalogMgmtGrid"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ========== MODALS ========== -->
+<!-- Student Modal -->
+<div id="studentModal" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="studentModalTitle">Add New Student</h3>
+      <button onclick="closeModal('studentModal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="studentId">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" id="sName" placeholder="Student name">
+        </div>
+        <div class="form-group">
+          <label>Phone *</label>
+          <input type="tel" id="sPhone" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Course *</label>
+          <select id="sCourse" onchange="autoFillFee()">
+            <option value="">Select course</option>
+            <option>Tally Prime</option>
+            <option>Busy Accounting</option>
+            <option>Advanced Excel</option>
+            <option>Financial Modelling</option>
+            <option>QuickBooks</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Total Fees (₹) *</label>
+          <input type="number" id="sFees" placeholder="e.g. 5000">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Amount Paid (₹)</label>
+          <input type="number" id="sPaid" placeholder="0" value="0">
+        </div>
+        <div class="form-group">
+          <label>Join Date</label>
+          <input type="date" id="sDate">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Address</label>
+        <input type="text" id="sAddress" placeholder="Student address">
+      </div>
+      <div class="modal-actions">
+        <button class="btn-outline" onclick="closeModal('studentModal')">Cancel</button>
+        <button class="btn-primary" onclick="saveStudent()">Save Student</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Payment Modal -->
+<div id="paymentModal" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>Record Payment</h3>
+      <button onclick="closeModal('paymentModal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Student *</label>
+          <select id="pStudent">
+            <option value="">Select student</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Amount (₹) *</label>
+          <input type="number" id="pAmount" placeholder="Enter amount">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Date *</label>
+          <input type="date" id="pDate">
+        </div>
+        <div class="form-group">
+          <label>Payment Method</label>
+          <select id="pMethod">
+            <option>Cash</option>
+            <option>UPI / QR</option>
+            <option>Bank Transfer</option>
+            <option>Cheque</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Notes</label>
+        <input type="text" id="pNotes" placeholder="Optional notes">
+      </div>
+      <div class="modal-actions">
+        <button class="btn-outline" onclick="closeModal('paymentModal')">Cancel</button>
+        <button class="btn-primary" onclick="savePayment()">Save Payment</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Catalog Modal -->
+<div id="catalogModal" class="modal-overlay hidden">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 id="catalogModalTitle">Add Course</h3>
+      <button onclick="closeModal('catalogModal')">✕</button>
+    </div>
+    <div class="modal-body">
+      <input type="hidden" id="catalogId">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Course Name *</label>
+          <input type="text" id="cName" placeholder="e.g. Tally Prime">
+        </div>
+        <div class="form-group">
+          <label>Duration *</label>
+          <input type="text" id="cDuration" placeholder="e.g. 3 Months">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Fees (₹) *</label>
+          <input type="number" id="cFees" placeholder="e.g. 5000">
+        </div>
+        <div class="form-group">
+          <label>Icon/Emoji</label>
+          <input type="text" id="cIcon" placeholder="e.g. 📊">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Short Description *</label>
+        <textarea id="cDesc" placeholder="Brief description of the course..."></textarea>
+      </div>
+      <div class="form-group">
+        <label>Syllabus (one topic per line)</label>
+        <textarea id="cSyllabus" placeholder="GST Filing&#10;Inventory Management&#10;Bank Reconciliation..."></textarea>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-outline" onclick="closeModal('catalogModal')">Cancel</button>
+        <button class="btn-primary" onclick="saveCatalog()">Save Course</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QR Payment Modal -->
+<div id="qrModal" class="modal-overlay hidden">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <h3>💳 Pay Now – SSS Institution</h3>
+      <button onclick="closeModal('qrModal')">✕</button>
+    </div>
+    <div class="modal-body center">
+      <div class="qr-box">
+        <div class="qr-placeholder">
+          <div class="qr-grid" id="qrGrid"></div>
+        </div>
+        <p class="qr-label">Scan & Pay via UPI</p>
+        <p class="qr-upi">UPI ID: <strong>sssinstitution@upi</strong></p>
+        <p class="qr-amount" id="qrAmount"></p>
+      </div>
+      <div class="pay-info">
+        <p>📞 After payment, call us at <strong>+91 **********</strong></p>
+        <p>📩 Send screenshot to WhatsApp for confirmation</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div id="toast" class="toast hidden"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <strong>📊 SSS Institution</strong>
+      <p>Empowering accounting careers since 2010</p>
+    </div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('catalog')">Courses</a>
+      <a href="#" onclick="showPage('contact')">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <p>📞 +91 ***** *****</p>
+      <p>📍 Chennai, Tamil Nadu</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 SSS Institution. All rights reserved.</div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
